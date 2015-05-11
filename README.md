@@ -1,5 +1,6 @@
 # PebbleTimeLiveblog
-Liveblog tracker for [Pebble Time](http://getpebble.com).  
+![](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/banner.png)  
+Liveblog tracker for [Pebble Time](http://getpebble.com).
 
 ## Features
 - Currently, follow the latest real-time updates from me at Maker Faire. Faster and more frequent than tweets!
@@ -21,6 +22,12 @@ so click the down button on the right side of your Pebble Time.
 - Click the middle button on your Pebble Time, and voila!  
 - Tip: You can keep the card open on your Pebble Time, as it updates itself! Cool, right?  
 Because of Pebble Time's e-paper screen, keeping the display on won't drain your battery.
+
+## Screenshots
+![N/A](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/screen1.png)
+![N/A](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/screen2.png)
+![N/A](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/screen3.png)
+![N/A](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/screen4.png)
 
 ## Uninstall
 Uninstall from the Pebble app on your phone.
