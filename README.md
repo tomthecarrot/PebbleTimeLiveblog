@@ -9,7 +9,7 @@ Liveblog tracker for [Pebble Time](http://getpebble.com).
 - Open-source license.
 
 ## Installation
-Go to the Pebble App Store on your phone and search for "Liveblog", or [click this link](http://tomthecarrot.com/wip).
+Go to the Pebble App Store on your phone and search for "Liveblog", or [click this link](https://apps.getpebble.com/applications/554ec47cecdc00f8140000c6).
 
 ## Usage
 1. Before (or during) a live event, install the app on your Pebble Time through the Pebble App Store.
