@@ -1,0 +1,23 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Thomas Suarez",
+    "longName": "Liveblog",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "Liveblog",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "1101dcc0-9ad2-4b28-b46a-f31a3d8cc3ab",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
