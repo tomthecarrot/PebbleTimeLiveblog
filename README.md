@@ -27,7 +27,6 @@ Because of Pebble Time's e-paper screen, keeping the display on won't drain your
 ![N/A](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/screen1.png)
 ![N/A](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/screen2.png)
 ![N/A](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/screen3.png)
-![N/A](https://raw.github.com/tomthecarrot/PebbleTimeLiveblog/master/screenshots/screen4.png)
 
 ## Uninstall
 Uninstall from the Pebble app on your phone.
