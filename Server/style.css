@@ -1,0 +1,62 @@
+/*
+	PebbleTimeLiveblog code by Thomas Suarez.
+	Open-Source License. See LICENSE file for more information.
+*/
+
+body {
+	font-family: sans-serif;
+	background-color: black;
+	color: #00FF00;
+}
+
+#header {
+	margin-top: 10vh;
+	text-align: center;
+}
+
+#header h1 {
+	font-size: 3em;
+	font-weight: 600;
+}
+#header h2 {
+	font-size: 2em;
+	font-weight: 400;
+}
+
+form {
+	margin-top: 3em;
+	text-align: center;
+}
+
+iframe {
+	display: block;
+	background-color: white;
+}
+
+#statusTF {
+	margin: 5vh 0;
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+	font-size: 4em;
+	width: 90%;
+	color: white;
+}
+
+.submitBTN {
+	background-color: rgba(255, 255, 255, 0);
+	
+	font-size: 3em;
+	
+	border-style: solid;
+	border-width: 2px;
+	
+	margin: 0.5em 1em;
+}
+.blue {
+	color: lightblue;
+	border-color: lightblue;
+}
+.red {
+	color: red;
+	border-color: red;
+}
