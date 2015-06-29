@@ -16,7 +16,7 @@ Pebble.addEventListener('ready',
     }
     );*/
     
-    Pebble.timelineSubscribe('makerfaire-ba-2015', 
+    Pebble.timelineSubscribe('verge-live', 
       function () { 
         console.log('Subscribed to topic!');
       }, 
