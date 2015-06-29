@@ -12,7 +12,9 @@ Liveblog tracker for [Pebble Time](http://getpebble.com).
 ## Installation
 Go to the Pebble App Store on your phone and search for "Liveblog", or [click this link](https://apps.getpebble.com/applications/554ec47cecdc00f8140000c6).
 
-## Usage
+## Precompiled App Usage
+I have uploaded my custom version of PebbleTimeLiveblog to the Pebble App Store.  
+
 1. Before (or during) a live event, install the app on your Pebble Time through the Pebble App Store.
 - Once the app is installed on your Pebble Time, open it. It should say "Subscribed".
 - Now, just wait for updates!
