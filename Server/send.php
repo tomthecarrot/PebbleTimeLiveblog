@@ -1,12 +1,12 @@
 <?php
 
-/**
-	PebbleTimeLiveblog code by Thomas Suarez.
-	Open-Source License. See LICENSE file for more information.
-	
-	NOTE: This must be run on a PHP server. If you try this on your local machine,
-			it might not work.
-**/
+/*
+PebbleTimeLiveblog code by Thomas Suarez.
+Open-Source License. See LICENSE file for more information.
+
+NOTE: This must be run on a PHP server. Depending on your setup,
+	it might not work on your local machine.
+*/
 
 ### From HTML ###
 $status = $_GET['status'];
