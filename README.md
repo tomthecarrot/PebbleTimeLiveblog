@@ -7,6 +7,7 @@ Liveblog tracker for [Pebble Time](http://getpebble.com).
 - Utilizes new Timeline functionality to quickly deliver automatic updates to your wrist.
 - Written in C.
 - Open-source license.
+- Pull Requests are welcome!
 - See ["verge" branch](https://github.com/tomthecarrot/PebbleTimeLiveblog/tree/verge) for following the latest liveblogs from The Verge on your Pebble Time.
 
 ## Installation
