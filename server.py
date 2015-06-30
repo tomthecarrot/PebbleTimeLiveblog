@@ -39,7 +39,7 @@ def send():
 	isotime = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z" # format UTC to make ISO
 
 	### Prepare data payload ###
-	layout = { 'type' : 'genericPin', 'title' : topicT, 'subtitle' : status, 'tinyIcon' : 'system://images/NEWS_EVENT' }
+	layout = { 'type' : 'genericPin', 'title' : topicT, 'subtitle' : status, 'tinyIcon' : 'system://images/NEWS_EVENT', "secondaryColor" : "blue", "backgroundColor" : "white" }
 	data = { 'id' : pinID, 'time' : isotime, 'layout' : layout }
 	
 	### Send to Server ###
