@@ -3,32 +3,49 @@ PebbleTimeLiveblog Server.
 Code by Thomas Suarez (tomthecarrot)
 '''
 
-import time as t
-import requests as r
 from datetime import datetime, date, time
+import time as t
+import requests
+import json
 
-url = "" # replace this with desired liveblog URL
 
-url = url + "/live.json"; # do not modify
+### USER-DEFINED VARS ###
 
-### Current Status (liveblog update) from The Verge
-status = ""
+# Replace this with desired liveblog URL:
+liveblog = "http://live.theverge.com/google-io-atap-regina-dugan-liveblog-2015/"
 
 # DEV: 0
 # LIVE: 1
 mode = 0
 
+#################################################
+
+### Last received liveblog update (status) from The Verge ###
+status = "Hello World"
+
+### Concatenate: liveblog URL + absolute file path ###
+liveblog = liveblog + "live.json"; # do not modify
+
 ### Pin URL ###
 pinID = "verge_live"
-url = ("https://timeline-api.getpebble.com/v1/shared/pins/" + pinID)
+pinURL = ("https://timeline-api.getpebble.com/v1/shared/pins/" + pinID)
 
 ### Pebble Server Topic ###
 topicT = "The Verge Live"
 topicX = "verge_live"
 
 ### Pebble Server API Keys
+apikey = ""
 devapikey = "YOUR_DEVELOPMENT_API_KEY"
 liveapikey = "YOUR_PRODUCTION_API_KEY"
+
+### Auto-choose API Key based on mode ###
+if mode is 0:
+	apikey = devapikey
+else:
+	apikey = liveapikey
+
+#################################################
 
 def update():
 	status = "test"
@@ -36,14 +53,17 @@ def update():
 
 def send():
 	### Get and Format current time ###
-	isotime = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z" # format UTC to make ISO
+	isotime = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z" # format UTC to make ISO time
 
 	### Prepare data payload ###
 	layout = { 'type' : 'genericPin', 'title' : topicT, 'subtitle' : status, 'tinyIcon' : 'system://images/NEWS_EVENT', "secondaryColor" : "blue", "backgroundColor" : "white" }
-	data = { 'id' : pinID, 'time' : isotime, 'layout' : layout }
+	payload = { 'id' : pinID, 'time' : isotime, 'layout' : layout }
+	headers = { 'Content-Type' : 'application/json', 'X-API-Key' : apikey, 'X-Pin-Topics' : topicX }
 	
 	### Send to Server ###
-	print(data)
+	r = requests.put(pinURL, data=json.dumps(payload), headers=headers)
+	print(r.text) # log response
+	print(payload) # print data
 
 
 ### Repeat ###
