@@ -24,7 +24,7 @@ mode = 0
 status = "Hello World"
 
 ### Concatenate: liveblog URL + absolute file path ###
-liveblog = liveblog + "live.json"; # do not modify
+liveblog = liveblog + "live.json" # do not modify
 
 ### Pin URL ###
 pinID = "verge_live"
@@ -49,7 +49,7 @@ else:
 
 def update():
 	status = "test"
-	send();
+	send()
 
 def send():
 	### Get and Format current time ###
