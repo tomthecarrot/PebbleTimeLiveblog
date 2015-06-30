@@ -31,7 +31,8 @@ Because of Pebble Time's e-paper screen, keeping the display on won't drain your
 ## Server
 1. In the Python script, replace the indicated values (API keys, etc.) with your own ones.
 - Replace the script's URL with the full web address of the Verge liveblog you want to follow.
-- Run start.py before or during a live broadcast.
+- Install server dependency: ```pip install requests```
+- Run server.py before or during a live broadcast.
 - Follow along on your watch!
 
 ## Screenshots
