@@ -20,6 +20,16 @@ mode = 0
 
 #################################################
 
+styleBold = '\033[1m'
+styleEnd = '\033[0m'
+print(styleBold + "PebbleTimeLiveblog Server" + styleEnd)
+
+#################################################
+
+### Ask for API key at runtime? ###
+# this will override any api keys set below, for that runtime!
+askforkey = True
+
 ### Last received liveblog update (status) from The Verge ###
 status = "Hello World"
 
@@ -32,7 +42,7 @@ pinURL = ("https://timeline-api.getpebble.com/v1/shared/pins/" + pinID)
 
 ### Pebble Server Topic ###
 topicT = "The Verge Live"
-topicX = "verge_live"
+topicX = "verge-live"
 
 ### Pebble Server API Keys
 apikey = ""
@@ -45,10 +55,15 @@ if mode is 0:
 else:
 	apikey = liveapikey
 
+### Ask for API key at runtime, if stated in above var. ###
+if askforkey:
+	apikey = input("Insert API Key: ")
+
 #################################################
 
 def update():
-	status = "test"
+	global status  # set this var globally
+	status = input("Insert New Status: ") #tmp test
 	send()
 
 def send():
@@ -60,13 +75,14 @@ def send():
 	payload = { 'id' : pinID, 'time' : isotime, 'layout' : layout }
 	headers = { 'Content-Type' : 'application/json', 'X-API-Key' : apikey, 'X-Pin-Topics' : topicX }
 	
-	### Send to Server ###
+	### Send to Pebble Server ###
+	print("Sending to Pebble: " + status)
 	r = requests.put(pinURL, data=json.dumps(payload), headers=headers)
-	print(r.text) # log response
-	print(payload) # print data
+	print(r.text) # log response (should be 'OK')
 
 
 ### Repeat ###
 while True:
 	update()
+	print("Wait 5 seconds...")
 	t.sleep(5) # sleep 5 seconds before next update from server
