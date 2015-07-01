@@ -40,7 +40,7 @@ status = "Hello World"
 liveblog = liveblog + "live.json" # do not modify
 
 ### Pin URL ###
-pinID = "verge_live"
+pinID = "verge-live"
 pinURL = ("https://timeline-api.getpebble.com/v1/shared/pins/" + pinID)
 
 ### Pebble Server Topic ###
@@ -74,7 +74,7 @@ def send():
 	isotime = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z" # format UTC to make ISO time
 
 	### Prepare data payload ###
-	layout = { 'type' : 'genericPin', 'title' : topicT, 'subtitle' : status, 'tinyIcon' : 'system://images/NEWS_EVENT', "secondaryColor" : "blue", "backgroundColor" : "white" }
+	layout = { 'type' : 'genericPin', 'title' : topicT, 'subtitle' : status, 'tinyIcon' : 'system://images/NEWS_EVENT', "secondaryColor" : "white", "backgroundColor" : "#00AAFF" }
 	payload = { 'id' : pinID, 'time' : isotime, 'layout' : layout }
 	headers = { 'Content-Type' : 'application/json', 'X-API-Key' : apikey, 'X-Pin-Topics' : topicX }
 	
