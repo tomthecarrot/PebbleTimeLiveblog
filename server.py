@@ -22,6 +22,9 @@ mode = 0
 # this will override any api keys set below, for that runtime!
 askforkey = True
 
+# Number of seconds to wait between updates
+timeout = 5
+
 #################################################
 
 styleBold = '\033[1m'
@@ -84,5 +87,5 @@ def send():
 ### Repeat ###
 while True:
 	update()
-	print("Wait 5 seconds...")
-	t.sleep(5) # sleep 5 seconds before next update from server
+	print("Wait...")
+	t.sleep(timeout) # sleep 5 seconds before next update from server
