@@ -18,6 +18,10 @@ liveblog = "http://live.theverge.com/google-io-atap-regina-dugan-liveblog-2015/"
 # LIVE: 1
 mode = 0
 
+### Ask for API key at runtime? ###
+# this will override any api keys set below, for that runtime!
+askforkey = True
+
 #################################################
 
 styleBold = '\033[1m'
@@ -25,10 +29,6 @@ styleEnd = '\033[0m'
 print(styleBold + "PebbleTimeLiveblog Server" + styleEnd)
 
 #################################################
-
-### Ask for API key at runtime? ###
-# this will override any api keys set below, for that runtime!
-askforkey = True
 
 ### Last received liveblog update (status) from The Verge ###
 status = "Hello World"
