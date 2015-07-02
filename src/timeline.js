@@ -24,5 +24,14 @@ Pebble.addEventListener('ready',
         console.log('Error subscribing to topic: ' + errorString);
       }
     );
+    
+    Pebble.timelineSubscribe('broadcast', 
+      function () { 
+        console.log('Subscribed to broadcast messages');
+      }, 
+      function (errorString) { 
+        console.log('Error subscribing to topic: ' + errorString);
+      }
+    );
   }
 );
